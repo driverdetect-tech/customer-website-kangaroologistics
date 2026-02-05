@@ -53,7 +53,7 @@ const Contact: React.FC = () => {
               </div>
               <div>
                 <h4 className="font-bold text-slate-800 text-lg mb-1">Our Location</h4>
-                <p className="text-gray-500 leading-relaxed">213 E Chickasaw Ave Suite B,<br />McAlister OK 74501</p>
+                <p className="text-gray-500 leading-relaxed">800 Park Ave, Suite 4,<br />Murfreesboro, TN 37129</p>
               </div>
             </div>
 
@@ -63,7 +63,7 @@ const Contact: React.FC = () => {
               </div>
               <div>
                 <h4 className="font-bold text-slate-800 text-lg mb-1">Call Us</h4>
-                <p className="text-gray-500 leading-relaxed">+469 4781003<br />+469 4781004</p>
+                <p className="text-gray-500 leading-relaxed">(630) 560-6699</p>
               </div>
             </div>
 
@@ -73,7 +73,7 @@ const Contact: React.FC = () => {
               </div>
               <div>
                 <h4 className="font-bold text-slate-800 text-lg mb-1">Email Us</h4>
-                <p className="text-gray-500 leading-relaxed">info@kangaroologistics.com<br />support@kangaroologistics.com</p>
+                <p className="text-gray-500 leading-relaxed">sergey@kangaroologistics.net</p>
               </div>
             </div>
 
@@ -157,6 +157,23 @@ const Contact: React.FC = () => {
                     <label className="text-sm font-bold text-slate-700 uppercase tracking-wider">Your Message</label>
                     <textarea required rows={6} className="w-full p-4 bg-white rounded-lg outline-none focus:ring-2 focus:ring-brand-primary border border-gray-200" placeholder="Tell us about your requirements..."></textarea>
                   </div>
+
+                  {/* Consent & Submit */}
+                  <div className="md:col-span-2 space-y-2">
+                    <div className="flex items-center h-6 mt-1">
+                      <input
+                        id="smsConsent"
+                        name="smsConsent"
+                        type="checkbox"
+                        className="w-6 h-6 text-black border-slate-300 rounded-lg focus:ring-black cursor-pointer"
+                      />
+                    </div>
+                    <label htmlFor="smsConsent" className="text-[11px] text-slate-500 leading-relaxed cursor-pointer select-none font-bold uppercase tracking-tight">
+                      By providing your phone number and checking this box, you agree to receive SMS messages from Kangaroo Logistics Corp including load status updates, delivery notifications, appointment reminders, application status updates, and DOT/FMCSA compliance alerts. Message frequency may vary. Standard Message and Data Rates may apply. Reply STOP to opt out. Reply HELP for help. Your mobile information will not be sold or shared with third parties for promotional or marketing purposes.
+                    </label>
+                  </div>
+
+
                   <div className="md:col-span-2">
                     <button
                       disabled={isSubmitting}
